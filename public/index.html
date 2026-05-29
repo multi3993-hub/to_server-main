@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Пример сайта для сервера</title>
+    <meta
+      name="description"
+      content="Небольшой пример сайта, который можно развернуть на удаленном сервере."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Spectral:ital,wght@0,500;0,700;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="grain"></div>
+
+    <header class="site-header">
+      <div class="container header-row">
+        <a href="#" class="logo">Northwind Studio</a>
+        <a href="#contact" class="btn btn-light">Связаться</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <p class="eyebrow reveal">Демо-страница</p>
+          <h1 class="reveal">
+            Супер-сайт, который можно запустить<br />
+            на удаленном сервере за 5 минут
+          </h1>
+          <p class="lead reveal">
+            Этот шаблон использует Python + Flask и статические файлы.
+            Подойдет для первого деплоя на VPS.
+          </p>
+          <div class="hero-actions reveal">
+            <a href="#features" class="btn btn-primary">Посмотреть блоки</a>
+            <a href="/health" class="btn btn-outline">Проверка /health</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="features">
+        <div class="container">
+          <div class="cards">
+            <article class="card reveal">
+              <h2>Быстрый старт</h2>
+              <p>
+                Установите зависимости и запустите проект командой
+                <code>python app.py</code>.
+              </p>
+            </article>
+            <article class="card reveal">
+              <h2>Готово для VPS</h2>
+              <p>
+                Порт берется из переменной окружения <code>PORT</code>, удобно
+                для Nginx и reverse proxy.
+              </p>
+            </article>
+            <article class="card reveal">
+              <h2>Наблюдаемость</h2>
+              <p>
+                Эндпоинт <code>/health</code> возвращает JSON и подходит для
+                мониторинга.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <div class="container reveal">
+          <h2>Статус сервера</h2>
+          <p>
+            Текущее время по серверу:
+            <strong id="serverTime">загрузка...</strong>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <p>© <span id="year"></span> Northwind Studio</p>
+        <p>Пример проекта для деплоя</p>
+      </div>
+    </footer>
+
+    <script src="/main.js"></script>
+  </body>
+</html>
